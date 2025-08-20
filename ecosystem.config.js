@@ -15,9 +15,7 @@ module.exports = {
       'pre-deploy-local': '',
       'post-deploy' : `
           npm install && 
-          npx pm2 reload ecosystem.config.js --env production &&
-          sudo echo $(cat ./ecosystem.conf) > /etc/nginx/nginx.conf &&
-          sudo systemctl reload nginx.service
+          npx pm2 reload ecosystem.config.js --env production
         `,
       'pre-setup': ''
     },
@@ -31,9 +29,7 @@ module.exports = {
       'pre-deploy-local': '',
       'post-deploy' : `
           npm install && 
-          npx pm2 reload ecosystem.config.js --env production &&
-          sudo cp ./ecosystem.conf /etc/nginx/conf.d/ecosystem.conf &&
-          sudo systemctl reload nginx.service
+          npx pm2 reload ecosystem.config.js --env production
         `,
       'pre-setup': ''
     }
