@@ -16,7 +16,7 @@ module.exports = {
       'post-deploy' : `
           npm install && 
           npx pm2 reload ecosystem.config.js --env production &&
-          sudo cp ~/source/ecosystem.conf /etc/nginx/conf.d/ecosystem.conf &&
+          sudo echo $(cat ./ecosystem.conf) > /etc/nginx/nginx.conf &&
           sudo systemctl reload nginx.service
         `,
       'pre-setup': ''
