@@ -16,7 +16,7 @@ module.exports = {
       'post-deploy' : `
           npm install && 
           npx pm2 reload ecosystem.config.js --env production &&
-          sudo cp ./nginx.conf /etc/nginx/conf.d &&
+          sudo cp ./nginx.conf /etc/nginx/nginx.conf &&
           sudo systemctl reload nginx.service
         `,
       'pre-setup': ''
@@ -32,7 +32,7 @@ module.exports = {
       'post-deploy' : `
           npm install && 
           npx pm2 reload ecosystem.config.js --env production &&
-          sudo cp ./nginx.conf /etc/nginx/conf.d &&
+          sudo cp ./nginx.conf /etc/nginx/nginx.conf &&
           sudo systemctl reload nginx.service
         `,
       'pre-setup': ''

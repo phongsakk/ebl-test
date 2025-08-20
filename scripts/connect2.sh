@@ -1,0 +1,1 @@
+ssh -i ~/.ssh/think-bit-aws-th.pem ec2-user@ec2-43-208-150-32.ap-southeast-7.compute.amazonaws.com
