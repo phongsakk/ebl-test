@@ -11,7 +11,7 @@ module.exports = {
       key  : '~/.ssh/think-bit-aws-th.pem',
       ref  : 'origin/master',
       repo : 'https://github.com/phongsakk/ebl-test.git',
-      path : '~/app',
+      path : '/home/ec2-user/app',
       'pre-deploy-local': '',
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
       'pre-setup': ''
@@ -22,7 +22,7 @@ module.exports = {
       key  : '~/.ssh/think-bit-aws-th.pem',
       ref  : 'origin/master',
       repo : 'https://github.com/phongsakk/ebl-test.git',
-      path : '~/app',
+      path : '/home/ec2-user/app',
       'pre-deploy-local': '',
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
       'pre-setup': ''
