@@ -13,7 +13,7 @@ module.exports = {
       repo : 'git@github.com:phongsakk/ebl-test.git',
       path : '/home/ec2-user',
       'pre-deploy-local': '',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
+      'post-deploy' : 'npm install && npx pm2 reload ecosystem.config.js --env production',
       'pre-setup': ''
     },
     server2 : {
