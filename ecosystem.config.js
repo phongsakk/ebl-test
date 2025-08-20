@@ -1,0 +1,29 @@
+module.exports = {
+  apps : [{
+    script: 'server.js',
+    watch: '.'
+  }],
+
+  deploy : {
+    server1 : {
+      user : 'ec2-user',
+      host : 'ec2-43-208-67-71.ap-southeast-7.compute.amazonaws.com',
+      key  : '~/.ssh/think-bit-aws-th',
+      ref  : 'origin/master',
+      repo : '',
+      path : '~/app',
+      'pre-deploy-local': '',
+      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
+      'pre-setup': ''
+    },
+    server2 : {
+      user : 'ec2-user',
+      host : 'ec2-43-208-150-32.ap-southeast-7.compute.amazonaws.com',
+      key  : '~/.ssh/think-bit-aws-th',
+      path : '~/app',
+      'pre-deploy-local': '',
+      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
+      'pre-setup': ''
+    }
+  }
+};
